@@ -1,0 +1,68 @@
+/* === STYLE GLOBAL === */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: radial-gradient(circle at top, #1a1a1a, #0c0c0c);
+  color: #f2f2f2;
+  line-height: 1.6;
+}
+
+/* === HEADER / NAVIGATION === */
+header {
+  background: linear-gradient(90deg, #0b3b61, #1a659e);
+  padding: 20px;
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+nav {
+  background: #141414;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px 0;
+  border-bottom: 2px solid #1a659e;
+}
+
+nav a {
+  color: #f2f2f2;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+nav a:hover {
+  color: #00bfff;
+  transform: scale(1.05);
+}
+
+/* === CONTENU === */
+section {
+  background: #1e1e1e;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
+h2 {
+  color: #00bfff;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+/* === FOOTER === */
+footer {
+  background: #0f0f0f;
+  color: #888;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+  border-top: 2px solid #1a659e;
+}

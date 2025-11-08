@@ -20,7 +20,7 @@ header {
 nav a {
   position: relative;
   display: inline-block;
-  color: #ffffff;
+  color: #ffffff; 
   text-decoration: none;
   font-weight: 600;
   padding: 8px 16px;
@@ -28,45 +28,41 @@ nav a {
   background: #0d0d0d;
   overflow: hidden;
   transition: transform 0.3s, box-shadow 0.3s;
+  border: 2px solid transparent;
   z-index: 0;
 }
 
 nav a::before {
   content: "";
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   border-radius: inherit;
+  padding: 2px; 
   background: linear-gradient(90deg, #00bfff, #40e0d0, #8a2be2, #ff66cc, #00bfff);
   background-size: 300% 300%;
-  animation: rgbGlow 6s linear infinite;
-  z-index: -2;
-  filter: blur(6px);
-  opacity: 0.9;
-}
-
-nav a::after {
-  content: "";
-  position: absolute;
-  inset: 2px;
-  background: #0d0d0d;
-  border-radius: inherit;
+  animation: rgbBorder 6s linear infinite;
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
   z-index: -1;
 }
 
 nav a:hover {
-  color: white;
   transform: scale(1.05);
-  box-shadow: 0 0 15px #00bfff, 0 0 25px #a020f0, 0 0 40px #ff66cc;
+  box-shadow: 0 0 15px rgba(0,191,255,0.5), 
+              0 0 25px rgba(160,32,240,0.4), 
+              0 0 40px rgba(255,102,204,0.3);
+  color: #ffffff; 
 }
 
-@keyframes rgbGlow {
+@keyframes rgbBorder {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
+
 
 section {
   background: #1e1e1e;

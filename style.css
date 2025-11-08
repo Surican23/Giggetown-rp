@@ -1,4 +1,4 @@
-/* === STYLE GLOBAL === */
+
 body {
   margin: 0;
   font-family: "Segoe UI", Arial, sans-serif;
@@ -7,7 +7,6 @@ body {
   line-height: 1.6;
 }
 
-/* === HEADER / NAVIGATION === */
 header {
   background: linear-gradient(90deg, #0b3b61, #1a659e);
   padding: 20px;
@@ -27,19 +26,56 @@ nav {
   border-bottom: 2px solid #1a659e;
 }
 
+/* === BOUTONS DU MENU AVEC EFFET RGB === */
 nav a {
+  position: relative;
+  display: inline-block;
   color: #f2f2f2;
   text-decoration: none;
   font-weight: 600;
-  transition: 0.2s;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #00bfff, #a020f0, #ff66cc);
+  background-size: 400%;
+  border: 2px solid transparent;
+  transition: 0.3s;
+  z-index: 0;
 }
+
+nav a::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #00bfff, #40e0d0, #8a2be2, #ff66cc);
+  background-size: 400%;
+  z-index: -1;
+  animation: rgbGlow 6s linear infinite;
+  filter: blur(4px);
+  opacity: 0.8;
+}
+
+nav a:hover {
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00bfff, 0 0 25px #a020f0, 0 0 40px #ff66cc;
+}
+
+@keyframes rgbGlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 
 nav a:hover {
   color: #00bfff;
   transform: scale(1.05);
 }
 
-/* === CONTENU === */
 section {
   background: #1e1e1e;
   max-width: 900px;
@@ -57,7 +93,6 @@ p {
   margin-bottom: 10px;
 }
 
-/* === FOOTER === */
 footer {
   background: #0f0f0f;
   color: #888;

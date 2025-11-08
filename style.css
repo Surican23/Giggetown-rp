@@ -17,6 +17,15 @@ header {
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;   
+  gap: 12px;           
+  flex-wrap: wrap;    
+  padding: 10px;
+}
+
 nav a {
   position: relative;
   display: inline-block;

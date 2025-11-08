@@ -17,10 +17,11 @@ header {
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
+/* === BOUTONS DU MENU AVEC CONTOUR RGB UNIQUEMENT === */
 nav a {
   position: relative;
   display: inline-block;
-  color: #ffffff; 
+  color: #ffffff; /* texte toujours blanc */
   text-decoration: none;
   font-weight: 600;
   padding: 8px 16px;
@@ -37,7 +38,7 @@ nav a::before {
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  padding: 2px; 
+  padding: 2px; /* épaisseur du contour */
   background: linear-gradient(90deg, #00bfff, #40e0d0, #8a2be2, #ff66cc, #00bfff);
   background-size: 300% 300%;
   animation: rgbBorder 6s linear infinite;
@@ -54,7 +55,7 @@ nav a:hover {
   box-shadow: 0 0 15px rgba(0,191,255,0.5), 
               0 0 25px rgba(160,32,240,0.4), 
               0 0 40px rgba(255,102,204,0.3);
-  color: #ffffff; 
+  color: #ffffff; /* reste blanc */
 }
 
 @keyframes rgbBorder {
@@ -62,7 +63,6 @@ nav a:hover {
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
-
 
 section {
   background: #1e1e1e;

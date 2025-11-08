@@ -17,15 +17,6 @@ header {
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
-nav {
-  background: #141414;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 10px 0;
-  border-bottom: 2px solid #1a659e;
-}
-
 nav a {
   position: relative;
   display: inline-block;
@@ -34,9 +25,8 @@ nav a {
   font-weight: 600;
   padding: 8px 16px;
   border-radius: 8px;
-  background: linear-gradient(90deg, #00bfff, #a020f0, #ff66cc);
-  background-size: 400%;
-  border: 2px solid transparent;
+  background: #0d0d0d;
+  overflow: hidden;
   transition: 0.3s;
   z-index: 0;
 }
@@ -44,17 +34,26 @@ nav a {
 nav a::before {
   content: "";
   position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  border-radius: 8px;
-  background: linear-gradient(90deg, #00bfff, #40e0d0, #8a2be2, #ff66cc);
-  background-size: 400%;
-  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #00bfff, #40e0d0, #8a2be2, #ff66cc, #00bfff);
+  background-size: 300% 300%;
   animation: rgbGlow 6s linear infinite;
-  filter: blur(4px);
-  opacity: 0.8;
+  z-index: -2;
+  filter: blur(6px);
+  opacity: 0.9;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #0d0d0d;
+  border-radius: inherit;
+  z-index: -1;
 }
 
 nav a:hover {
@@ -67,12 +66,6 @@ nav a:hover {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
-}
-
-
-nav a:hover {
-  color: #00bfff;
-  transform: scale(1.05);
 }
 
 section {

@@ -24,6 +24,8 @@ nav {
   gap: 12px;           
   flex-wrap: wrap;    
   padding: 10px;
+  text-align: center;
+  float: none;
 }
 
 nav a {

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Giggletown RP – Comment rejoindre le serveur Minecraft">
+  <title>Giggletown RP – Rejoindre</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: radial-gradient(circle at top, #1a1a1a, #0c0c0c);
+      color: white;
+      text-align: center;
+    }
+
+    header {
+        background: linear-gradient(90deg, #0b3b61, #1a659e);
+        padding: 25px;
+        text-align: center;
+        font-weight: bold;
+        letter-spacing: 1px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    header h1 {
+      text-align: center;
+      margin: 0;
+      color: white;
+      text-shadow:
+        0 0 10px rgba(255,255,255,0.6),
+        0 0 25px rgba(176,38,255,0.8);
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      padding: 12px;
+    }
+
+    nav a {
+      position: relative;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: 8px;
+      background: #0d0d0d;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      border: 2px solid transparent;
+      z-index: 0;
+    }
+
+    nav a::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: 2px;
+      background: linear-gradient(
+        90deg,
+        #00bfff,
+        #40e0d0,
+        #8a2be2,
+        #ff66cc,
+        #00bfff
+      );
+      background-size: 300% 300%;
+      animation: rgbBorder 6s linear infinite;
+      -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+      mask-composite: exclude;
+      z-index: -1;
+    }
+
+    nav a:hover {
+      transform: scale(1.05);
+      box-shadow:
+        0 0 15px rgba(0,191,255,0.5),
+        0 0 25px rgba(160,32,240,0.4),
+        0 0 40px rgba(255,102,204,0.3);
+    }
+
+    @keyframes rgbBorder {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    main {
+      flex: 1;
+      padding: 40px 20px;
+    }
+
+    h2 {
+      color: #00ffff;
+    }
+
+    .info {
+      background: rgba(255,255,255,0.05);
+      border: 2px solid rgba(255,255,255,0.2);
+      border-radius: 15px;
+      padding: 20px;
+      max-width: 300px;
+      margin: 30px auto;
+      box-shadow: 0 0 20px rgba(0,255,255,0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    select {
+      background-color: #0f0f1a;
+      color: white;
+      border: 2px solid;
+      border-image: linear-gradient(90deg, #00ffff, #b026ff, #ff00ff) 1;
+      border-radius: 10px;
+      padding: 10px;
+      font-size: 1em;
+      outline: none;
+      cursor: pointer;
+      transition: 0.4s;
+    }
+
+    select:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #00ffff;
+    }
+
+    .download-btn {
+      margin-top: 20px;
+      padding: 10px 30px;
+      border-radius: 100px;
+      border: none;
+      font-size: 1em;
+      cursor: pointer;
+      color: white;
+      background: linear-gradient(90deg, #00ffff, #b026ff, #ff00ff);
+      transition: transform 0.3s, box-shadow 0.3s
+    }
+
+    .download-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #b026ff;
+    }
+
+    footer {
+      padding: 15px;
+      font-size: 0.85em;
+      opacity: 0.6;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Giggletown RP</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="rejoindre.html">Rejoindre</a>
+    <a href="histoire.html">Histoire</a>
+    <a href="contact.html">Contact</a>
+    <a href="statut.html">Statut</a>
+  </nav>
+
+  <main>
+    <h2>Comment rejoindre le serveur ?</h2>
+
+    <div class="info">
+      <p><b>Version :</b> Minecraft Java 1.20.1</p>
+      <p><b>IP :</b> giggletownrp.aternos.me</p>
+      <p><b>Client :</b> Forge</p>
+    </div>
+
+    <h2>Télécharger les mods</h2>
+
+    <label for="mods">Sélectionne ton pack :</label>
+    <select id="mods">
+      <option value="">-- Sélectionner --</option>
+      <option value="https://www.dropbox.com/scl/fi/1plgyfvqvcebhrzqjks74/Modpack-Giggletown-3.2.zip?dl=1">Pack minimal</option>
+      <option value="https://www.dropbox.com/scl/fi/4aa8bys593qzk8twvajhk/journeymap-1.20.1-5.10.3-forge.jar?dl=1">Pack recommandé</option>
+    </select>
+
+    <br>
+    <button class="download-btn" onclick="telecharger()">Télécharger</button>
+  </main>
+
+  <footer>
+    © 2025 Giggletown RP — Site officiel du serveur Minecraft
+  </footer>
+
+  <script>
+    function telecharger() {
+      const choix = document.getElementById("mods").value;
+      if (choix) window.location.href = choix;
+    }
+  </script>
+
+</body>
+</html>
